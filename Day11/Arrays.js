@@ -67,7 +67,7 @@
 // })
 
 
-let fruits = ["orange","Mango","Banana","Kiwi"] 
+// let fruits = ["orange","Mango","Banana","Kiwi"] 
 
 // fruits.forEach(function(fruit,index){
 //     console.log(`${fruit} at index ${index}` )
@@ -134,7 +134,71 @@ let fruits = ["orange","Mango","Banana","Kiwi"]
 
 //channing Map, filter and reduce
 //[2,4,7,8,5] => [2,4,8] => [4,8,16] => 28
-const nums = [2,4,7,8,5];
-const result = nums.filter(num=> num%2 === 0).map((num)=>num*2).reduce((acc,num)=>acc+num,0)
+// const nums = [2,4,7,8,5];
+// const result = nums.filter(num=> num%2 === 0).map((num)=>num*2).reduce((acc,num)=>acc+num,0)
 
-console.log(result)
+// console.log(result)
+
+//Basic methods of Array
+
+//1. indexOf(elm)
+let fruits = ["orange","Mango","Banana","Kiwi","Mango"] 
+
+// console.log(fruits.indexOf("Mango"))
+
+// console.log(fruits.indexOf("Grapes"))
+
+//2. LastIndexOf(elm)
+// console.log(fruits.lastIndexOf("Mango"))
+// console.log(fruits.lastIndexOf("Grapes"))
+
+//3. includes() 
+console.log(fruits.includes("Grapes"))
+console.log(fruits.includes("Mango"))
+
+//4. push()
+fruits.push("Grapes")
+console.log(fruits)
+
+//5.pop()
+fruits.pop()
+console.log(fruits)
+
+//6. unshift()
+fruits.unshift("grapes")
+console.log(fruits)
+
+//7. shift()
+fruits.shift();
+console.log(fruits)
+
+//8. concat()
+//2 or more arrays -> join // return new array
+
+// let num1 = [4,5,62,3,8]
+// let num2 = [5,9,7,6,1,17]
+
+// let newArr = num1.concat(num2)
+
+// console.log(newArr)
+
+//9. slice(start , end) // end -> excluded
+
+// console.log(fruits.slice(1,4))
+
+
+//11. join //array to string
+
+// console.log(fruits.join(", "))
+
+//12. reverse() // modifies original array
+
+// let num = [6,5,3,1]
+
+// num.reverse()
+
+// console.log(num)
+
+//13. sort()// modifies original array
+// fruits.sort()
+// console.log(fruits)
