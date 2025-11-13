@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent">
+        <p class="child">Hello</p>
+        <p class="child2">hello 2</p>
+        <h3 class="child">Heading</h3>
+        <!-- comment -->
+    </div>
+</body>
+<script>
+    let p = document.querySelector('p')
+    //parent
+    // console.log(p.parentElement)
+    // console.log(p.parentNode)
+
+    // console.log(document.documentElement.parentElement);
+    // console.log(document.documentElement.parentNode)
+
+    //children
+    let parent = document.querySelector("#parent")
+    // console.log(parent.children)// htmlcollection
+
+    // console.log(parent.childNodes)//node list
+
+    // console.log(parent.firstElementChild)
+    // console.log(parent.lastElementChild)
+
+    //siblings
+    const child2 = document.querySelector(".child2")
+    console.log(child2.nextElementSibling)
+    console.log(child2.previousElementSibling)
+
+    //remove child
+    // parent.removeChild(parent.lastElementChild);
+
+</script>
+</html>

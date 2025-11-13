@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1 class="heading" id="h">JavaScript <p>hello </p> by Sameeksha <span style="display:none;">Barhaiya</span></h1>
+        <p class="para">1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, earum.</p>
+        <!-- comment -->
+        <p >2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, earum.</p>
+        <!-- comment -->
+        <p class="para">3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, earum.</p>
+        <p > 4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, earum.</p>
+
+        <ul>
+            <li>apple</li>
+            <li>Mango</li>
+            <li>banana</li>
+            <li>Kiwi</li>
+        </ul>
+    </div>
+</body>
+<script>
+    //selecting elements
+    // const heading = document.getElementById("h") //direct element 
+    // console.log(heading)
+
+    // const para = document.getElementsByClassName("para") //htmlcollection
+    // console.log(para)
+
+    // const tag = document.getElementsByTagName("p")//htmlcollection
+    // console.log(tag)
+
+    // const  qs = document.querySelector(".para")//direct element 
+    // console.log(qs)
+
+    // const qsAll = document.querySelectorAll("p")//Node list 
+    // console.log(qsAll)
+
+    // const fruits  = document.getElementsByTagName('li')
+    // console.log(fruits)
+    // const arr = Array.from(fruits)
+    // console.log(arr)
+
+    // arr.forEach(function(li){
+    //     li.style.color = "orange"
+    // })
+
+    //1. innerText
+    console.log(document.querySelector("#h").innerText)
+
+
+    //2. innerHTML
+    // document.querySelector("#h").innerHTML = "JavaScript By Sameeksha"
+    console.log(document.querySelector("#h").innerHTML)
+
+    // //3. textContent
+    // document.querySelector("#h").textContent = "JavaScript Tutorial"
+
+    console.log(document.querySelector("#h").textContent)
+
+</script>
+</html>
