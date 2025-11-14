@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="parent">
+        <li class="o">Orange</li>
+        <li id="second">Apple</li>
+        <li>Mango</li>
+    </ul>
+</body>
+<script>
+    let parent = document.getElementById("parent");
+    const h1 = document.createElement("h1")
+    h1.innerText = "Fruits"
+
+    // parent.insertBefore(h1,parent.firstElementChild)
+
+    //insertAdjacentHTML(postition, elm)
+
+    // const li = document.getElementById("second")
+    // const kiwi = document.createElement("li")
+    // kiwi.innerHTML = "kiwi"
+    // li.insertAdjacentElement("afterbegin", kiwi)
+
+    //how to copy html elements = cloneNode()
+    //deep copy
+    // let newUl = parent.cloneNode(true)
+    // document.body.appendChild(newUl)
+
+    //shallow copy
+    // let newUl = parent.cloneNode(false)
+    // console.log(newUl)
+
+    // let o = document.querySelector(".o");
+    // o.classList.add("orange")
+    // o.classList.remove("orange")
+
+</script>
+</html>
