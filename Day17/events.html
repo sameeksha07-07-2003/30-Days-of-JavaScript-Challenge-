@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="grandparent" style="padding: 20px; background: lightblue;">
+        Grandparent
+        <div id="parent" style="padding: 20px; background: lightgreen;">
+            Parent
+            <button id="child" style="padding: 10px;">Click Me</button>
+            <!-- //1st way  -->
+            <!-- <button id="child" style="padding: 10px;" onclick= "alert('button Clicked!')">Click Me</button> -->
+        </div>
+    </div>
+</body>
+<script>
+    //2nd 
+    // document.getElementById("parent").onclick = function(){
+    //     alert("Parent clicked!")
+    // }
+
+    //3rd (modern way) (best)
+    // document.getElementById("grandparent").addEventListener('click' , function(){
+    //     alert("grandparent clicked!")
+    // })
+
+    //3rd parameter by default is false
+    document.getElementById("grandparent").addEventListener('click',function(){
+        console.log("grandparent clicked!");
+    })
+    document.getElementById("parent").addEventListener('click',function(e){
+        console.log("parent clicked!")
+        
+    })
+    document.getElementById("child").addEventListener('click', function(e){
+        console.log("child clicked!");
+        e.stopPropagation();
+    })
+
+
+</script>
+</html>

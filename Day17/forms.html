@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form >
+        <!-- <label for="name">Name:
+            <input type="text" name="name" id="name">
+        </label>
+        <label for="password">Password: 
+            <input type="password" name="password" id="pass">
+        </label>
+
+        <button type="submit">Submit</button> -->
+
+        <label >
+            <input type="radio" name="gender" value="Male" id="male">Male
+        </label>
+        <label >
+            <input type="radio" name="gender" value="Female" id="female">Female
+        </label>
+    </form>
+    <p id="result"></p>
+</body>
+<script>
+    // let form = document.querySelector("form");
+    // form.addEventListener("submit",function(e){
+    //     e.preventDefault();
+    //     console.log(document.getElementById("name").value);
+    // })
+
+    //
+    let radios = document.querySelectorAll('input[name="gender"]');
+    radios.forEach((radio)=>{
+        radio.addEventListener("change",function(){
+            document.getElementById("result").innerText = "You Selected: " + this.value;
+        })
+    })
+</script>
+</html>

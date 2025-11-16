@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="parent" style="background-color: blanchedalmond;padding: 20px;">
+        <li id="one">Apple</li>
+        <li id="two">Mango</li>
+        <li id="three">Banana</li>
+        <li id="four">Orange</li>
+        <li id="five">Kiwi</li>
+    </ul>
+</body>
+<script>
+    const parent = document.getElementById("parent");
+    parent.addEventListener('click', function(e){
+        if(e.target.tagName === 'LI'){
+        let removeItem = e.target;
+        removeItem.remove();
+    }
+    })
+    
+</script>
+</html>
