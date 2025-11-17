@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding:0;
+        background-color: white;
+        color:#333;
+    }
+    body.dark{
+        background-color: #1a1a1a;
+        color: #f1f1f1;
+    }
+    .container{
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    button{
+        padding: 12px 25px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        background-color: #222;
+        color: white;
+        transition: 0.3s;
+    }
+    body.dark button{
+        background-color:#f1f1f1;
+        color: #222;
+    }
+</style>
+<body >
+    <div class="container">
+        <h1>Light / Dark Theme Toggle</h1>
+        <p>Click the button to switch theme.</p>
+        <button id="theme-toggle">🌙 Dark Mode</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
