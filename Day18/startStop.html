@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Click start to start the interval and stop to stop the interval</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    let cnt = 1;
+    let interval = null;
+    document.getElementById("start").addEventListener('click',()=>{
+        if(!interval){
+        interval = setInterval(()=>{
+            console.log("Hello "+cnt);
+            cnt++
+        },1000);}
+    })
+    document.getElementById("stop").addEventListener('click',()=>{
+        clearInterval(interval)
+        cnt = 1;
+        interval = null;
+    })
+</script>
+</html>

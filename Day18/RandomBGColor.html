@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>click start to generate Random background Colors. & click stop to hold on color</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    function randomHexCodeGenerator() {
+        let hex = "#"
+        let value = "0123456789abcdef"
+        for (let i = 0; i < 6; i++) {
+            hex += value[Math.floor(Math.random() * 16)]  
+        }
+        return hex;
+    }
+
+    let interval = null;
+    document.getElementById("start").addEventListener('click', () => {
+
+        if (!interval) {
+            interval = setInterval(() => {
+                document.querySelector('body').style.backgroundColor = randomHexCodeGenerator();
+            }, 1000)
+        }
+    })
+
+    document.getElementById("stop").addEventListener('click', () => {
+        clearInterval(interval)
+        interval = null
+    })
+
+</script>
+
+</html>
